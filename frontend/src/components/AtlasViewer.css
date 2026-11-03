@@ -1,0 +1,17 @@
+.atlas-viewer {
+  width: 100%;
+  min-height: 720px;
+  overflow: hidden;
+  border: 1px solid #e7e9e3;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.atlas-loading {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #687268;
+  font-size: 14px;
+}

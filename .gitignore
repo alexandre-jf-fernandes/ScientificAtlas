@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/dist/
+dist/
+
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Scientific datasets
+*.h5ad
+*.h5
+*.hdf5
+*.zarr/
+data/
+*.zarr
+
+# System files
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+!.env.example
