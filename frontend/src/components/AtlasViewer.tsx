@@ -111,7 +111,7 @@ const vitessceConfig = {
 
 
 export default function AtlasViewer() {
-  const [colormap, setColormap] = useState('plasma')
+  const [colormap] = useState('plasma')
 
   const config = {
     ...vitessceConfig,
