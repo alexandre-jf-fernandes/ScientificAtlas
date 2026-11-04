@@ -9,17 +9,20 @@ const Vitessce = lazy(async () => {
 const vitessceConfig = {
   version: '1.0.0',
   initStrategy: 'auto',
-  name: 'Oral Tissue Single-Cell Atlas',
+  name: 'Single-Cell Atlas of the Oral Cavity',
   description: 'Single-cell transcriptomic atlas of oral tissues.',
 
   datasets: [
     {
       uid: 'oral-atlas',
-      name: 'Oral Tissue Single-Cell Atlas',
+      name: 'Single-Cell Atlas of he oral cavity',
       files: [
         {
           fileType: 'anndata.zarr',
-          url: new URL('/data/test.zarr', window.location.href).href,
+          url: new URL(
+            `${import.meta.env.BASE_URL}data/test.zarr`,
+            window.location.origin
+          ).href,
           coordinationValues: {
             obsType: 'cell',
             featureType: 'gene',
@@ -119,21 +122,6 @@ export default function AtlasViewer() {
   }
 
   return (
-    <div>
-      <div className="colormap-control">
-        <label htmlFor="gene-colormap">Gene expression palette</label>
-        <select
-          id="gene-colormap"
-          value={colormap}
-          onChange={(event) => setColormap(event.target.value)}
-        >
-          <option value="reds">Reds</option>
-          <option value="viridis">Viridis</option>
-          <option value="plasma">Plasma</option>
-          <option value="inferno">Inferno</option>
-          <option value="magma">Magma</option>
-        </select>
-      </div>
 
       <div className="atlas-viewer">
         <Suspense fallback={
@@ -141,10 +129,9 @@ export default function AtlasViewer() {
             Loading cellular atlas...
           </div>
         }>
-          <Vitessce config={config} theme="light" height={720} />
+          <Vitessce config={config} theme="dark" height={720} />
         </Suspense>
       </div>
-    </div>
   )
 }
 
