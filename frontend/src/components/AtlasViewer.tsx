@@ -19,10 +19,7 @@ const vitessceConfig = {
       files: [
         {
           fileType: 'anndata.zarr',
-          url: new URL(
-            `${import.meta.env.BASE_URL}data/test.zarr`,
-            window.location.origin
-          ).href,
+          url: 'https://storage.googleapis.com/storage_isequeira/test.zarr',
           coordinationValues: {
             obsType: 'cell',
             featureType: 'gene',
