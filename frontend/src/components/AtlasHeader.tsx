@@ -17,11 +17,6 @@ export default function AtlasHeader() {
         <NavLink to="/datasets">Datasets</NavLink>
         <NavLink to="/atlas">Explore Atlas</NavLink>
       </nav>
-
-      <div className="header-context">
-        <span className="status-dot" />
-        Research & Discovery
-      </div>
     </header>
   )
 }
