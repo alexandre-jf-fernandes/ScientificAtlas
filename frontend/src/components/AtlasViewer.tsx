@@ -15,11 +15,11 @@ const vitessceConfig = {
   datasets: [
     {
       uid: 'oral-atlas',
-      name: 'Single-Cell Atlas of he oral cavity',
+      name: 'Single-Cell Atlas of the oral cavity',
       files: [
         {
           fileType: 'anndata.zarr',
-          url: 'https://storage.googleapis.com/storage_isequeira/test.zarr',
+          url: 'https://storage.googleapis.com/storage_isequeira/test_paper1/test.zarr',
           coordinationValues: {
             obsType: 'cell',
             featureType: 'gene',
